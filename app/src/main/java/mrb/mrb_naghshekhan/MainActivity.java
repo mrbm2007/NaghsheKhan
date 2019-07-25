@@ -337,7 +337,7 @@ public class MainActivity extends ActionBarActivity {
                     }
                     int dt_ = dt;
                     if (currentMap().current_knot_index == 0)
-                        dt_ *= 1.6;
+                        dt_ *= 1.9;
                     if (dt_ < 1000)
                         dt_ = 1100;
                     handler.postDelayed(this, dt_);
