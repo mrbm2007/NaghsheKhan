@@ -211,7 +211,7 @@ public class MainActivity extends ActionBarActivity {
                 .setNegativeButton("نه", dialogClickListener).show();
         //DrawMap();
     }
-    public void DrawMap() {
+    /*public void DrawMap() {
         Map m = currentMap();
         if(m==null)return;
         for (int i = 0; i < m.rows.size(); i++)
@@ -235,7 +235,7 @@ public class MainActivity extends ActionBarActivity {
                 }
         }
         imageView.setImageBitmap(bitmap);
-    }
+    }*/
     public void onClickBtn_row_next(View v){
         Map m = currentMap();
         if(m==null)return;
@@ -366,7 +366,7 @@ public class MainActivity extends ActionBarActivity {
         UpdateView();
         if (handler != null)
             try {
-                handler.removeCallbacksAndMessages(null); 
+                handler.removeCallbacksAndMessages(null);
             } catch (Exception ex) {
             }
     }
