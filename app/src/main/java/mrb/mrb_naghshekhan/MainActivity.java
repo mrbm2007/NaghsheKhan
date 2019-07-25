@@ -29,6 +29,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -126,6 +127,28 @@ public class MainActivity extends ActionBarActivity {
             }, 0);
         } catch (Exception ex) {
         }
+    }
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_CALL||
+            event.getKeyCode() == KeyEvent.KEYCODE_FORWARD||
+            event.getKeyCode() == KeyEvent.KEYCODE_HEADSETHOOK ) {
+            Map m = currentMap();
+            if(m!=null) {
+                m.GoNext();
+                UpdateView();
+            }
+            return true;
+        }
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK  ) {
+            Map m = currentMap();
+            if(m!=null) {
+                m.GoNext();
+                UpdateView();
+            }
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
     }
     int iii=0;
     public void  onClickPanel_back(View v) {
