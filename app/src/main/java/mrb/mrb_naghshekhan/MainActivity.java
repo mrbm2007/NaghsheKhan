@@ -137,6 +137,8 @@ public class MainActivity extends ActionBarActivity {
             if(m!=null) {
                 m.GoNext();
                 UpdateView();
+                if (!playing)
+                    Say(true);
             }
             return true;
         }
@@ -145,6 +147,8 @@ public class MainActivity extends ActionBarActivity {
             if(m!=null) {
                 m.GoNext();
                 UpdateView();
+                if (!playing)
+                    Say(true);
             }
             return true;
         }
@@ -539,16 +543,16 @@ public class MainActivity extends ActionBarActivity {
             ((TextView) findViewById(R.id.text_row)).setText(Tools.En2Fa(m.current_row().number+""));
             ((TextView) findViewById(R.id.textV_color)).setText(Tools.En2Fa(m.current_color().code +""));
             ((TextView) findViewById(R.id.text_knot_)).setText(Tools.En2Fa(m.current_knot() +""));
-            Say();
+            Say(false);
         } catch (Exception ex) {
             Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
     Thread th;
     boolean sound=true;
-    void Say() {
+    void Say(boolean say_if_not_playing) {
         final Context context = this;
-        if (playing && sound)
+        if ((say_if_not_playing || playing) && sound)
             try {
                 Tools.Silent();
                 Tools.Silent();
