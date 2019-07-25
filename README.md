@@ -1,5 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/srwru0a96rw9v7dn?svg=true)](https://ci.appveyor.com/project/StefH/linqkit)
-
+ 
 نقشه خوان صوتی
 ==========
 یک برنامه اندروید برای خواندن نقشه صوتی تابلو فرش روی گوشی موبایل
