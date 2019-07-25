@@ -1,0 +1,9 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+*.jks
+site/1.txt
+app/نقشه صوتی دارکوب.apk
