@@ -318,7 +318,7 @@ public class MainActivity extends ActionBarActivity {
         dt = (int) (1000.0 / (gpm / 60.0) - 1000.0);
 
         playing = true;
-        final Handler handler = new Handler();
+        handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -352,10 +352,11 @@ public class MainActivity extends ActionBarActivity {
         UpdateView();
         WriteSetting();
     }
+    Handler handler;
     boolean playing = false;
-    public void onClickBtn_stop(View v){
+    public void onClickBtn_stop(View v) {
         Map m = currentMap();
-        if(m==null)return;
+        if (m == null) return;
         findViewById(R.id.btn_stop).setVisibility(View.GONE);
         findViewById(R.id.btn_start).setVisibility(View.VISIBLE);
         Tools.Silent();
@@ -363,6 +364,11 @@ public class MainActivity extends ActionBarActivity {
         Tools.Silent();
         playing = false;
         UpdateView();
+        if (handler != null)
+            try {
+                handler.removeCallbacksAndMessages(null); 
+            } catch (Exception ex) {
+            }
     }
     public void onClickBtn_delete(View v){
         Map m = currentMap();
