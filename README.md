@@ -12,7 +12,7 @@ http://daremco.com/products
 ==========
 فایل نصب برنامه از آدرس زیر قابل دریافت است
 
-https://github.com/mrbm2007/NaghsheKhan/blob/master/app/app-release.apk
+https://github.com/mrbm2007/NaghsheKhan/releases/
 https://github.com/mrbm2007/NaghsheKhan/raw/master/app/app-release.apk
 
 
